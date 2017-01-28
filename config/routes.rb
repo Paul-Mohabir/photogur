@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   patch 'pictures/:id' => "pictures#update"
   get 'pictures/new' => 'pictures#new' # this is also a new line of code
   get 'pictures/:id' => 'pictures#show', as: 'picture'
+  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
 
+  root 'pictures#index'
 end
